@@ -1,0 +1,107 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    overflow: hidden;
+    background-image: linear-gradient(45deg, rgb(233, 57, 189) 20%, rgb(107, 250, 71) 50%);
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+}
+
+.open-modal-btn {
+    padding: 20px 40px;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.6);
+}
+
+.modal__inner {
+    width: 400px;
+    position: relative;
+    top: 50%;
+    margin: auto;
+    background: white;
+    border-radius: 10px; /*Đoạn này chỉ có cong 2 thằng dưới*/
+    overflow: hidden; /*thêm overflow vào thì nó sẽ khống chế*/
+    animation: modalShow 0.2s linear;
+}
+
+.modal__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    background: rgb(17, 58, 243);
+}
+.modal__header p {
+    font-size: 30px;
+    color: chartreuse;
+}
+
+.modal__header .fa-xmark {
+    cursor: pointer;
+}
+
+.modal__body {
+    padding: 15px;
+    line-height: 1.6;
+}
+
+.modal__body h2 {
+    font-size: 30px;
+    color: rgb(250, 53, 18);
+}
+
+.modal__body p {
+    font-size: 18px;
+}
+
+.modal__footer {
+    padding: 15px;
+    text-align: right;
+}
+
+.modal__footer button {
+    padding: 10px 20px;
+    background: rgb(80, 235, 41);
+    border-radius: 10px;
+    border: 1px solid rgb(83, 73, 230);
+    color: white;
+    outline: none;
+    cursor: pointer;
+}
+
+/*ẨN MODAL*/
+
+.hiden {
+    display: none;
+}
+/*thêm class hiden vào sau class modal bên html*/
+
+/*Tạo hiệu ứng Modal hiển thị chậm*/
+@keyframes modalShow {
+    from{
+        top: -200px;
+        opacity: 0;
+    }
+    to {
+        top: 0;
+        opacity: 1;
+
+    }
+}
