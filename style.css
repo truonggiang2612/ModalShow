@@ -9,7 +9,6 @@ body {
     overflow: hidden;
     background-image: linear-gradient(45deg, rgb(233, 57, 189) 20%, rgb(107, 250, 71) 50%);
     display: flex;
-    /* justify-content: center; */
     align-items: center;
 }
 
@@ -28,6 +27,7 @@ body {
     width: 100vw;
     height: 100vh;
     background: rgba(0, 0, 0, 0.6);
+    transition: 0.4s;
 }
 
 .modal__inner {
